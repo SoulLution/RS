@@ -131,15 +131,107 @@
         </div>
       </div>
     </div>
+    <div class="flex flex-col hot content">
+      <hot :list="products" />
+    </div>
+    <div class="flex flex-col blog content">
+      <blog :list="blogs" />
+    </div>
   </div>
 </template>
 
 <script>
-import vCheckBox from "~/components/vCheckBox.vue"
 export default {
-  components: { vCheckBox },
   data() {
     return {
+      products: [
+        {
+          id: 1,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 2,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 3,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 4,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 5,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 6,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 7,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        },
+        {
+          id: 8,
+          img: "/default_room.png",
+          title: "1-комнатная квартира 43 м2",
+          district: "Алмалинский р-н",
+          price: "7 343 560"
+        }
+      ],
+      blogs: [
+        {
+          id: 1,
+          html: `Недвижимость остается наиболее выгодном активом для сохранения средств. Однако пандемия, длительный карантин, скачки курса валют и дешевая ипотека Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt veritatis molestias hic labore nulla ipsum repellendus, accusantium vel impedit? Quidem asperiores, libero excepturi illum saepe autem consequuntur unde magnam!`,
+          title: "Почему стоит вкладывать в недвижимость?",
+          img: "/default_blog.png",
+          author: "Виталий Ревякин"
+        },
+        {
+          id: 2,
+          html: `Недвижимость остается наиболее выгодном активом для сохранения средств. Однако пандемия, длительный карантин, скачки курса валют и дешевая ипотека Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt veritatis molestias hic labore nulla ipsum repellendus, accusantium vel impedit? Quidem asperiores, libero excepturi illum saepe autem consequuntur unde magnam!`,
+          title: "Почему стоит вкладывать в недвижимость?",
+          img: "/default_blog.png",
+          author: "Виталий Ревякин"
+        },
+        {
+          id: 3,
+          html: `Недвижимость остается наиболее выгодном активом для сохранения средств. Однако пандемия, длительный карантин, скачки курса валют и дешевая ипотека Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt veritatis molestias hic labore nulla ipsum repellendus, accusantium vel impedit? Quidem asperiores, libero excepturi illum saepe autem consequuntur unde magnam!`,
+          title: "Почему стоит вкладывать в недвижимость?",
+          img: "/default_blog.png",
+          author: "Виталий Ревякин"
+        },
+        {
+          id: 4,
+          html: `Недвижимость остается наиболее выгодном активом для сохранения средств. Однако пандемия, длительный карантин, скачки курса валют и дешевая ипотека Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt veritatis molestias hic labore nulla ipsum repellendus, accusantium vel impedit? Quidem asperiores, libero excepturi illum saepe autem consequuntur unde magnam!`,
+          title: "Почему стоит вкладывать в недвижимость?",
+          img: "/default_blog.png",
+          author: "Виталий Ревякин"
+        }
+      ],
       type: {
         id: 1,
         value: "Продажа"
@@ -232,11 +324,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hot {
+  max-width: calc(1400px + 1rem);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.blog {
+  max-width: calc(1424px + 0.5rem);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .photo {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("/index_city.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-position: 0 100%;
+  // background-size: 100% 100%;
 }
 </style>
